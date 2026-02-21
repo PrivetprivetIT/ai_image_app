@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сканди-генератор | Изображения по тексту</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Создайте изображение</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="prompt">Ваш запрос</label>
+                <input type="text" id="prompt" name="prompt" placeholder="например: a peaceful forest with sunlight" required>
+            </div>
+
+            <div class="form-group">
+                <label for="device">Устройство</label>
+                <select id="device" name="device">
+                    <option value="cpu">CPU — медленно, но надёжно</option>
+                    <option value="gpu">GPU — быстро (требуется NVIDIA)</option>
+                </select>
+            </div>
+
+            <button type="submit">Сгенерировать</button>
+        </form>
+    </div>
+</body>
+</html>
